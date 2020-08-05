@@ -19,10 +19,10 @@ class CashRegister
     else 
       @items << title
     end
-    @total = @last_transaction = price * quantity
-    # @total += price*quantity
-    # @last_transaction = @total
-    # @total
+    # @total = @last_transaction = price * quantity
+    @total += price*quantity
+    @last_transaction = @total
+    @total
   end
   
   def apply_discount
